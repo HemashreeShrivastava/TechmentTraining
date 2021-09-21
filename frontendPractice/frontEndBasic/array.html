@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>person</h1>
+    <p id="print">p1</p>
+</body>
+<script>
+
+let person = [
+    {
+        fname : "priyanka",
+        lname : "shrivas",
+        age:21,
+        dept : "manager"  
+    },
+    {
+    fname : "Annu",
+    lname : "shrivas",
+    age:44,
+    dept : "developer"
+},
+{
+    fname : "priya",
+    lname : "shrivas",
+    age:22,
+    dept : "hr"  
+}
+]
+console.log("=====normal print========");
+for( key in person){
+    console.log(person[key]);
+
+    console.log("=====normal print using Id========");
+    document.getElementById("print").innerHTML = '${key.fname} <br>'
+}
+
+</script>
+</html>

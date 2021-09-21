@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My show</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<style>
+    table{
+        /* margin-top: 50px; */
+        border: 2px solid black;
+        margin: auto;
+        border-radius: 30px;
+    }
+
+    td{
+        border: 2px solid black;
+        height: 80px;
+        width: 100px;
+        text-align: center;
+    }
+
+    table button{
+        background-color: greenyellow;
+    }
+
+    #right{
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Book My Show</h1>
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Row</label>
+              <input type="text" class="form-control" id="row" aria-describedby="emailHelp">
+             
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Column</label>
+              <input type="text" class="form-control" id="col">
+            </div>
+           
+          
+          </form>
+          <button type="submit" id="btn" onclick="fun1()" class="btn btn-primary">Submit</button>
+
+          <span> Ticket Price is 200 per person</span>
+
+          <button type="submit" id="right" onclick="book()" class="btn btn-primary">Book</button>
+          <h5 id=show></h5>
+
+    
+
+        <table id="table1">
+
+        </table>
+        <!-- <button id="btn2" onclick="change('red')">Change</button> -->
+
+    </div>
+
+
+    <script>
+    let count = 0;
+        let a = 'A';
+            function fun1(){
+       let row = parseInt(document.getElementById("row").value);
+       let col = parseInt(document.getElementById("col").value);
+                
+       let html = ""
+
+        for(i=0; i<row; i++){
+            document.getElementById("table1").innerHTML += `<tr id="tableRow${i+1}">  </tr>`;
+            for(j=0; j<col; j++){
+                document.getElementById(`tableRow${i+1}`).innerHTML += `<td>   <button id="btn${i}${j}" onclick="change(this,'red')">${i} ${j} </button></td>`;
+            }
+
+        }
+
+    }
+
+    function change(elem, red) {
+        elem.style.backgroundColor = "red";
+
+        count++;
+    }
+
+    function book(){
+        let Total = 200* count;
+        document.getElementById('show').innerHTML = Total;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
