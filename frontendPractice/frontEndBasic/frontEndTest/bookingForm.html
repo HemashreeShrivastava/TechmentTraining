@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="FormStyl.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form class="signup-form" action="/register" method="post">
+    <!-- form header -->
+    <div class="form-header">
+      <h1>Flight Booking</h1>
+    </div>
+
+    <!-- form body -->
+    <div class="form-body">
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="CustomerName" class="label-title">Customer Name*</label>
+          <input type="text" id="customerName" class="form-input" placeholder="enter your Name" required="required" />
+        </div>
+        <div class="form-group right ">
+          <label for="flightName" class="label-title">Flight Name *</label>
+          <input type="text" id="flightName" class="form-input" placeholder="enter flight name" required="required">
+        </div>
+
+      </div>
+
+
+      <div class="horizontal-group">
+
+        <div class="form-group left">
+          <label for="source" class="label-title">Source *</label>
+          <input type="text" id="source" class="form-input" placeholder="enter source" required="required">
+        </div>
+
+        <div class="form-group right">
+          <label for="destination" class="label-title">Destination *</label>
+          <input type="text" class="form-input" id="destination" placeholder="enter your destination"
+            required="required">
+        </div>
+      </div>
+
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="departure" class="label-title">Departure*</label>
+          <input type="date" id="departure" class="form-input" placeholder="enter departure date" required="required" />
+        </div>
+        <div class="form-group right ">
+          <label for="return" class="label-title">Return *</label>
+          <input type="date" id="return" class="form-input" placeholder="enter return date" required="required">
+        </div>
+
+      </div>
+      <div class="horizontal-group">
+        <div class="form-group left">
+          <label for="noOfPerson" class="label-title">Number of person*</label>
+          <input type="number" id="noOfPerson" class="form-input" placeholder="enter total number of person "
+            required="required" />
+        </div>
+        <div class="form-group right">
+          <label for="totalAmount" class="label-title">Total Amount</label>
+          <input type="number" id="totalAmount" class="form-input" placeholder="display  total amount "
+            required="required" />
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+      <!-- form footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Booking Request</button>
+      </div>
+  </form>
+  <h4><a href="index.html">Return Home</a></h4>
+</body>
+
+</html>

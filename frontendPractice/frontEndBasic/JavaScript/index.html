@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World</title>
+<script>
+    function myFunction()
+    {
+        alert("hello ");
+        document.getElementById("p1").innerHTML="new content in paragarph 1"
+         }
+         function changeAttribute()
+         {
+             document.getElementBy("img").height=600;
+         }
+    function changeBgColorFunction()
+    {
+        document.getElementById("bd").style.backgroundColor="blue";
+   
+    }
+</script>
+</head>
+<body id= "bd" style="background-color: azure;">
+
+<h1>This is a Heading</h1>
+<p id="p1">This is a paragraph1.</p>
+<p id="p2">This is a paragraph2.</p>
+<img id="img" src="E:\typeScriptPractice\bg.jpg" width="300" height="300">
+<button onclick="myFunction()">Click here</button>
+<button onclick="changeBgColorFunction()">Click here</button>
+<button onclick="changeAttribute()">chage attribute of image</button>
+</body>
+
+</html>

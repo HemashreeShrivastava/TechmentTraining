@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-image: url('rm218batch8-mynt-22.jpg');
+            background-repeat: no-repeat;
+            background-size:100%;
+        }
+         table {
+  font-family: arial, sans-serif;
+    border-collapse: collapse;
+    
+    
+    align-content: flex-start;
+    padding: 100;
+    word-spacing: 100;
+         }
+         .center {
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+    </style>
+</head>
+<body >
+   <center> <H1>Gold Price Calculator</H1></center>
+<table border="1" class='center'>    
+    <tr>
+        <td>
+        <input type="text" name="goldPrice" id="goldPrice" placeholder="Enter the today's gold price">
+        </td> 
+    </tr> 
+    <tr>
+        <td >   
+        <input type="text" name="goldPriceGrams" onblur="goldPrice()" id="goldPriceGrams" placeholder="Enter the weight in gram">
+        <p id="p1" ></p> 
+        </td> 
+    </tr>
+    <tr>
+        <td>
+        <input type="text" name="makingCharge" id="makingCharge" placeholder="Enter the Making Charges" onblur="makingCharge()">
+        <p id="p2" ></p> 
+        </td> 
+    </tr>
+    <tr>
+        <td>
+        <input type="text" name="taxCharge" id="taxCharge" placeholder="Enter the Tax charge" onblur="taxCharge(), totalAmount()">
+        <p id="p3" ></p> 
+        <p id="p4" ></p>
+        </td> 
+    </tr>
+
+</table>  
+</body>
+<script>
+    var out ,makingChargeper,taxCharge;
+function goldPrice()
+{
+    
+    
+ var price=document.getElementById("goldPrice").value;
+ 
+ 
+ var goldPriceGrams = document.getElementById("goldPriceGrams").value;
+ 
+  out=parseInt(price)*parseInt(goldPriceGrams);
+ 
+document.getElementById("p1").innerHTML="Gold rate amount :"+out;
+
+}
+function makingCharge()
+{
+    
+   makingChargeper=(out*parseInt(document.getElementById("makingCharge").value))/100;
+   
+   document.getElementById("p2").innerHTML="Making charge amount"+makingChargeper;
+
+}
+function taxCharge()
+{
+ taxCharge =(out*parseInt(document.getElementById("taxCharge").value))/100;
+    document.getElementById("p3").innerHTML="Tax charge amount"+taxCharge;
+
+}
+function totalAmount()
+{
+    document.getElementById("p4").innerHTML="Total amount"+(out+makingChargeper+taxCharge).toFixed(2);
+   
+}
+</script>
+</html>

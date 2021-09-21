@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+    Enter first Number<input type="text" id="n1">
+    </p>
+    <p>
+    Enter second Number<input type="text" id="n2">
+    </p>
+    <p id="ans"></p>
+    <p>
+        <button value="add" onclick="add()">Add</button>
+    </p>
+    <!--<p>
+        <button value="sub" onclick="sub()">Sub</button>
+    </p>
+    <p>
+        <button value="mul" onclick="mul()">Mul</button>
+    </p>
+    <p>
+        <button value="div" onclick="div()">Div</button>
+    </p>-->
+    <script>
+        
+        var a;
+        alert(a);
+        var b=document.getElementById("n2").value();
+        function add()
+        {
+            a=parseInt(document.getElementById("n1").value());
+            alert(a);
+            document.write(parseInt(a));
+            document.getElementById("ans").innerHTML=a+b;
+        }
+    </script>
+</body>
+
+</html>
