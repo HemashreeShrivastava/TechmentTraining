@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>printing table </h1>
+    <input type="text" id="num" placeholder="enter the number">
+    <input type="text" id="limit" placeholder="enter the limit" onblur="table()">
+    <div id="p1"></div>
+</body>
+<script>
+    function table()
+    {
+        var a=parseInt(document.getElementById("num").value);
+        var b=parseInt(document.getElementById("limit").value);
+       alert(b);
+        for(var i=1;i<=b;i++)
+        {
+            document.write(a+"*"+i+"="+a*i+"<br/>");
+        }
+   
+    }
+</script>
+</html>

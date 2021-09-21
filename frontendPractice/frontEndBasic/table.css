@@ -1,0 +1,52 @@
+body {
+    background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-size:100%
+  }
+  .column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .table1
+  {
+      background-image: url('bg3.jpg');
+     background-repeat: no-repeat;
+     background-size: auto;
+    opacity: 0.8;
+      color:blue;
+     margin-top: 180;
+      height: 200;
+  }
+  .table2
+  {
+      background-color:cornflowerblue;
+      opacity: 0.6;
+      margin-top: 180;
+      margin-left: 50;
+     color:black;
+      height: 200;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    
+    width: 70%;
+    align-content: flex-start;
+    padding: 10;
+    word-spacing: 10;
+    
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  

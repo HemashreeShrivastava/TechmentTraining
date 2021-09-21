@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+
+       Rows <input type="text" id="rows">
+    Columns <input type="text" id="columns">
+
+    <input type="button" value="Create Table" onClick="printTable();">
+
+    <div id="box"></div>
+    
+</body>
+<script>
+    
+    function printTable()
+    {
+        var nRows=document.getElementById("rows");
+        var nColumns=document.getElementById("columns");
+        var spaceofDiv=document.getElementById("box");
+        var tableStr = "";
+        tableStr ="<table border=1>";
+        for(i=0; i<nRows.value; i++)
+        {
+            tableStr +="<tr>";
+            for(j=0; j<nColumns.value; j++)
+            {    
+                tableStr +="<td width=50 height=50><button id='check${i}${j}' onclick=changeMsg(this)>"+i+j+"</button></td>&nbsp;";
+            }
+            tableStr +="</tr>"; 
+        }
+        tableStr  += "</table>"
+        spaceofDiv.innerHTML=tableStr;     
+
+    }
+    function changeMsg(elem)
+    {
+        elem.innerHTML="Booked";
+        
+    }
+</script>
+</html>
